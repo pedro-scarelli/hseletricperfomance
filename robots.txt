@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hseletric.netlify.app/sitemap.xml
+Sitemap: https://www.hseletricperfomance.com/sitemap.xml

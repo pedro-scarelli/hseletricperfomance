@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Carregador de Carro Elétrico em Blumenau | HS Eletric Performance</title>
 <meta name="description" content="Instalação de wallbox e carregador para carro elétrico em Blumenau e região. Credenciado Volvo e GWM, +200 carregadores instalados. Orçamento no WhatsApp.">
-<link rel="canonical" href="https://hseletric.netlify.app/">
+<link rel="canonical" href="https://www.hseletricperfomance.com/">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#000000">
 <meta name="color-scheme" content="dark">
@@ -15,8 +15,8 @@
 <meta property="og:site_name" content="HS Eletric Performance">
 <meta property="og:title" content="Instalação de carregador veicular em Blumenau e região">
 <meta property="og:description" content="Wallbox instalado com circuito exclusivo e as proteções que a norma exige. Credenciado Volvo e GWM, +200 carregadores instalados.">
-<meta property="og:url" content="https://hseletric.netlify.app/">
-<meta property="og:image" content="https://hseletric.netlify.app/og-image.jpg">
+<meta property="og:url" content="https://www.hseletricperfomance.com/">
+<meta property="og:image" content="https://www.hseletricperfomance.com/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="HS Eletric Performance: instalação de carregador veicular em Blumenau e região">
@@ -29,7 +29,7 @@
 
 <link rel="preload" href="assets/fonts/barlow-condensed-800.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/barlow-400.woff2" as="font" type="font/woff2" crossorigin>
-<script>document.documentElement.classList.remove('no-js'); document.documentElement.classList.add('js');</script>
+<link rel="preload" href="assets/fonts/barlow-600.woff2" as="font" type="font/woff2" crossorigin>
 
 <style>
 :root {
@@ -48,7 +48,7 @@
   --ink: #000000;
   --dock-bg: rgba(0, 0, 0, .94);
 
-  --font-display: "Barlow Condensed", "Arial Narrow", "Roboto Condensed", Arial, sans-serif;
+  --font-display: "Barlow Condensed", "Barlow Condensed Fallback", "Barlow Condensed Fallback Roboto", "Arial Narrow", sans-serif;
   --font-body: "Barlow", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 
   --radius: .5rem;
@@ -60,8 +60,11 @@
 }
 
 @font-face { font-family: "Barlow Condensed"; font-style: normal; font-weight: 800; font-display: swap; src: url("assets/fonts/barlow-condensed-800.woff2") format("woff2"); }
-@font-face { font-family: "Barlow"; font-style: normal; font-weight: 400; font-display: swap; src: url("assets/fonts/barlow-400.woff2") format("woff2"); }
-@font-face { font-family: "Barlow"; font-style: normal; font-weight: 600; font-display: swap; src: url("assets/fonts/barlow-600.woff2") format("woff2"); }
+@font-face { font-family: "Barlow"; font-style: normal; font-weight: 400; font-display: optional; src: url("assets/fonts/barlow-400.woff2") format("woff2"); }
+@font-face { font-family: "Barlow"; font-style: normal; font-weight: 600; font-display: optional; src: url("assets/fonts/barlow-600.woff2") format("woff2"); }
+/* Fontes do sistema com a largura ajustada à Barlow Condensed: enquanto ela carrega, os títulos ocupam o mesmo espaço */
+@font-face { font-family: "Barlow Condensed Fallback"; font-style: normal; font-weight: 800; src: local("Arial Bold"), local("Arial-BoldMT"), local("Liberation Sans Bold"), local("LiberationSans-Bold"), local("Arimo Bold"), local("Arimo-Bold"); size-adjust: 68.6%; }
+@font-face { font-family: "Barlow Condensed Fallback Roboto"; font-style: normal; font-weight: 800; src: local("Roboto Bold"), local("Roboto-Bold"); size-adjust: 75%; }
 
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-padding-top: calc(var(--header-h) + env(safe-area-inset-top, 0px) + 1rem); }
@@ -110,6 +113,10 @@ h3 { font-size: 1.5rem; letter-spacing: .005em; }
 .hero__title .hl { color: var(--yellow); }
 .hero__place { display: flex !important; align-items: center; gap: .45em; margin-top: .4em; font-size: .4em; line-height: 1.1; letter-spacing: .01em; }
 .hero__place::before { content: ""; width: 1.6em; height: .16em; flex: none; background: var(--yellow); }
+/* Enquanto a fonte dos títulos carrega, as linhas do topo não quebram: a altura fica igual e nada abaixo se mexe */
+.fonts-wait .hero__title { overflow-x: clip; }
+.fonts-wait .hero__title span, .fonts-wait .proof strong { white-space: nowrap; }
+.fonts-wait .proof li { overflow-x: clip; }
 .lead { margin-top: 1.25rem; max-width: 34rem; font-size: 1.125rem; line-height: 1.55; }
 .hero__cta { display: grid; gap: .875rem; margin-top: 1.75rem; }
 .hero__phone { font-size: .9375rem; color: var(--muted); }
@@ -249,6 +256,18 @@ h3 { font-size: 1.5rem; letter-spacing: .005em; }
   .js .circuit:not(.is-on) .node::after { transform: scaleX(0); }
 }
 </style>
+<script>
+(() => {
+  const root = document.documentElement;
+  root.classList.remove('no-js');
+  root.classList.add('js');
+  // Segura a quebra de linha dos títulos do topo até a Barlow Condensed chegar (no máximo 3 s)
+  if (!document.fonts || !document.fonts.load) return;
+  root.classList.add('fonts-wait');
+  const done = () => root.classList.remove('fonts-wait');
+  Promise.race([document.fonts.load('800 1em "Barlow Condensed"'), new Promise((ok) => setTimeout(ok, 3000))]).then(done, done);
+})();
+</script>
 
 <script type="application/ld+json">
 {
@@ -256,16 +275,16 @@ h3 { font-size: 1.5rem; letter-spacing: .005em; }
   "@graph": [
     {
       "@type": "Electrician",
-      "@id": "https://hseletric.netlify.app/#empresa",
+      "@id": "https://www.hseletricperfomance.com/#empresa",
       "name": "HS Eletric Performance",
       "alternateName": ["HS Eletric", "HS Electric Performance"],
       "description": "Instalação de carregador veicular (wallbox) para carros elétricos e híbridos plug-in, projetos luminotécnicos e manutenção elétrica industrial em Blumenau e região.",
       "slogan": "Energia que te move para o futuro",
-      "url": "https://hseletric.netlify.app/",
+      "url": "https://www.hseletricperfomance.com/",
       "sameAs": ["https://www.instagram.com/hs_eletric_performance/"],
       "telephone": "+55 47 98415-2765",
-      "logo": "https://hseletric.netlify.app/assets/img/logo-hs-512.png",
-      "image": "https://hseletric.netlify.app/og-image.jpg",
+      "logo": "https://www.hseletricperfomance.com/assets/img/logo-hs-512.png",
+      "image": "https://www.hseletricperfomance.com/og-image.jpg",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Blumenau",
@@ -293,11 +312,11 @@ h3 { font-size: 1.5rem; letter-spacing: .005em; }
     },
     {
       "@type": "WebSite",
-      "@id": "https://hseletric.netlify.app/#site",
-      "url": "https://hseletric.netlify.app/",
+      "@id": "https://www.hseletricperfomance.com/#site",
+      "url": "https://www.hseletricperfomance.com/",
       "name": "HS Eletric Performance",
       "inLanguage": "pt-BR",
-      "publisher": { "@id": "https://hseletric.netlify.app/#empresa" }
+      "publisher": { "@id": "https://www.hseletricperfomance.com/#empresa" }
     }
   ]
 }
@@ -306,7 +325,7 @@ h3 { font-size: 1.5rem; letter-spacing: .005em; }
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "@id": "https://hseletric.netlify.app/#duvidas",
+  "@id": "https://www.hseletricperfomance.com/#duvidas",
   "mainEntity": [
     {
       "@type": "Question",

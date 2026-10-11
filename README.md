@@ -16,7 +16,7 @@ Para testar localmente: `python3 -m http.server 8080` dentro da pasta e abrir `h
 
 ## Antes de publicar
 
-1. **Domínio.** O site está configurado para `https://hseletric.netlify.app`. Quando tiver o domínio próprio, troque esse endereço (sem a barra final) nestes lugares:
+1. **Domínio.** O site está configurado para `https://www.hseletricperfomance.com`. No Netlify, adicione esse domínio em Domain management e deixe o `www` como domínio principal: o `hseletric.netlify.app` passa a redirecionar para ele. Se o domínio mudar um dia, troque o endereço (sem a barra final) nestes lugares:
    - `index.html`: `canonical`, `og:url`, `og:image` e os `@id`, `url`, `logo` e `image` dos dois blocos JSON-LD (11 ocorrências)
    - `robots.txt`: linha `Sitemap:`
    - `sitemap.xml`: `<loc>`
