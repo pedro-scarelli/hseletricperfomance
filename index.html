@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="pt-BR" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Carregador de Carro Elétrico em Blumenau | HS Eletric Performance</title>
+<meta name="description" content="Instalação de wallbox e carregador para carro elétrico em Blumenau e região. Credenciado Volvo e GWM, +200 carregadores instalados. Orçamento no WhatsApp.">
+<link rel="canonical" href="https://www.seudominio.com.br/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="HS Eletric Performance">
+<meta property="og:title" content="Instalação de carregador veicular em Blumenau e região">
+<meta property="og:description" content="Wallbox instalado com circuito exclusivo e as proteções que a norma exige. Credenciado Volvo e GWM, +200 carregadores instalados.">
+<meta property="og:url" content="https://www.seudominio.com.br/">
+<meta property="og:image" content="https://www.seudominio.com.br/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="HS Eletric Performance: instalação de carregador veicular em Blumenau e região">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+
+<link rel="preload" href="assets/fonts/barlow-condensed-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/barlow-400.woff2" as="font" type="font/woff2" crossorigin>
+<script>document.documentElement.classList.remove('no-js'); document.documentElement.classList.add('js');</script>
+
+<style>
+:root {
+  /* Layout: mobile first em uma coluna; a partir de 48rem o hero divide texto e foto; a partir de 64rem o circuito corre na horizontal */
+  --black: #000000;
+  --stone: #1A1813;
+  --line: #2C2820;
+  --wire: #4A4336;
+  --yellow: #E7AD20;
+  --yellow-hover: #F2BE3E;
+  --yellow-line: rgba(231, 173, 32, .42);
+  --glow: rgba(231, 173, 32, .16);
+  --white: #FFFFFF;
+  --text: #D8D3C9;
+  --muted: #A49D90;
+  --ink: #000000;
+  --dock-bg: rgba(0, 0, 0, .94);
+
+  --font-display: "Barlow Condensed", "Arial Narrow", "Roboto Condensed", Arial, sans-serif;
+  --font-body: "Barlow", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+
+  --radius: .5rem;
+  --max: 72rem;
+  --gutter-l: max(1rem, env(safe-area-inset-left, 0px));
+  --gutter-r: max(1rem, env(safe-area-inset-right, 0px));
+  --header-h: 4rem;
+  color-scheme: dark;
+}
+
+@font-face { font-family: "Barlow Condensed"; font-style: normal; font-weight: 800; font-display: swap; src: url("assets/fonts/barlow-condensed-800.woff2") format("woff2"); }
+@font-face { font-family: "Barlow"; font-style: normal; font-weight: 400; font-display: swap; src: url("assets/fonts/barlow-400.woff2") format("woff2"); }
+@font-face { font-family: "Barlow"; font-style: normal; font-weight: 600; font-display: swap; src: url("assets/fonts/barlow-600.woff2") format("woff2"); }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-padding-top: calc(var(--header-h) + env(safe-area-inset-top, 0px) + 1rem); }
+body { margin: 0; background: var(--black); color: var(--text); font: 400 1.0625rem/1.6 var(--font-body); -webkit-font-smoothing: antialiased; }
+img, svg { display: block; max-width: 100%; }
+img { height: auto; }
+a { color: inherit; -webkit-tap-highlight-color: transparent; }
+p, ul, ol, figure { margin: 0; }
+h1, h2, h3 { margin: 0; font-family: var(--font-display); font-weight: 800; text-transform: uppercase; line-height: .95; color: var(--white); text-wrap: balance; }
+h2 { font-size: clamp(2.25rem, 10.5vw, 3.75rem); }
+h3 { font-size: 1.5rem; letter-spacing: .005em; }
+:focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; border-radius: 2px; }
+.icon { width: 1.375rem; height: 1.375rem; flex: none; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+.wrap { width: 100%; max-width: var(--max); margin-inline: auto; padding-inline: var(--gutter-l) var(--gutter-r); }
+.skip { position: absolute; left: 1rem; top: -4rem; z-index: 50; padding: .75rem 1rem; background: var(--yellow); color: var(--ink); font-weight: 600; text-decoration: none; border-radius: var(--radius); }
+.skip:focus { top: calc(env(safe-area-inset-top, 0px) + .5rem); }
+
+/* Botões */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .625rem; min-height: 3.25rem; padding: .75rem 1.25rem; border: 2px solid transparent; border-radius: var(--radius); font: 600 1.0625rem/1.2 var(--font-body); text-decoration: none; text-align: center; transition: background-color .15s, color .15s, border-color .15s; }
+.btn--primary { background: var(--yellow); color: var(--ink); }
+.btn--outline { border-color: var(--yellow); color: var(--yellow); }
+.btn--dark { background: var(--black); color: var(--yellow); }
+@media (hover: hover) {
+  .btn--primary:hover { background: var(--yellow-hover); }
+  .btn--outline:hover { background: var(--yellow); color: var(--ink); }
+  .btn--dark:hover { color: var(--white); }
+}
+
+/* Cabeçalho */
+.topbar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--black); border-bottom: 1px solid var(--line); }
+.topbar__in { display: flex; align-items: center; gap: .75rem; min-height: var(--header-h); }
+.brand { margin-right: auto; border-radius: 2px; }
+.brand img { height: 2.25rem; width: auto; }
+.nav { display: none; }
+.btn--head { min-height: 2.75rem; width: 2.75rem; padding: 0; }
+.btn--head .btn__label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Hero */
+.hero { padding-block: 2rem 3.5rem; }
+.hero__grid { display: grid; gap: 2.5rem; }
+.hero__text { container-type: inline-size; min-width: 0; }
+.hero__title { font-size: clamp(2.75rem, 15vw, 5.75rem); font-size: clamp(2.75rem, 17.5cqi, 5.75rem); line-height: .9; }
+.hero__title span { display: block; }
+.hero__title .hl { color: var(--yellow); }
+.hero__place { display: flex !important; align-items: center; gap: .45em; margin-top: .4em; font-size: .4em; line-height: 1.1; letter-spacing: .01em; }
+.hero__place::before { content: ""; width: 1.6em; height: .16em; flex: none; background: var(--yellow); }
+.lead { margin-top: 1.25rem; max-width: 34rem; font-size: 1.125rem; line-height: 1.55; }
+.hero__cta { display: grid; gap: .875rem; margin-top: 1.75rem; }
+.hero__phone { font-size: .9375rem; color: var(--muted); }
+.hero__phone a { color: var(--white); font-weight: 600; text-decoration-color: var(--yellow); text-decoration-thickness: 2px; text-underline-offset: .2em; }
+.proof { display: grid; grid-template-columns: 1fr 1fr; margin-top: 2rem; padding: 1.25rem 0 0; list-style: none; border-top: 1px solid var(--line); }
+.proof li { min-width: 0; padding-right: .75rem; font-size: .9375rem; line-height: 1.35; }
+.proof li + li { padding: 0 0 0 1rem; border-left: 1px solid var(--yellow-line); }
+.proof strong { display: block; margin-bottom: .2rem; font: 800 clamp(1.5rem, 7.6vw, 2rem)/1 var(--font-display); text-transform: uppercase; color: var(--yellow); }
+.hero__media { position: relative; min-width: 0; }
+.hero__media img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 35%; border-radius: .75rem; background: var(--stone); }
+.tag { position: absolute; top: .75rem; right: .75rem; display: flex; align-items: center; gap: .5rem; max-width: 12.5rem; padding: .375rem .875rem .375rem .375rem; background: var(--yellow); color: var(--ink); border-radius: 999px; font: 800 .875rem/1.05 var(--font-display); text-transform: uppercase; }
+.tag .icon { width: 1.875rem; height: 1.875rem; padding: .375rem; background: var(--black); color: var(--yellow); border-radius: 50%; }
+
+/* Seções */
+.section { padding-block: 4rem; }
+.section--stone { background: var(--stone); }
+.section__head { display: grid; gap: 1rem; max-width: 46rem; }
+.section__intro { font-size: 1.125rem; }
+
+/* Serviços */
+.services { display: grid; margin-top: 2.25rem; }
+.service { padding-block: 1.75rem; border-top: 1px solid var(--yellow-line); }
+.service--main { padding: 1.5rem 1.25rem; background: var(--stone); border: 1px solid var(--line); border-radius: .75rem; margin-bottom: .75rem; }
+.service__head { display: flex; align-items: center; gap: .875rem; }
+.service__icon { width: 2.5rem; height: 2.5rem; flex: none; color: var(--yellow); }
+.service p { margin-top: .875rem; }
+.checks { display: grid; gap: .625rem; margin-top: 1.125rem; padding: 0; list-style: none; }
+.checks li { display: flex; gap: .625rem; align-items: flex-start; }
+.checks .icon { width: 1.25rem; height: 1.25rem; margin-top: .2rem; color: var(--yellow); }
+.service .btn { margin-top: 1.5rem; }
+.service--main .btn { width: 100%; }
+.link { display: inline-flex; align-items: center; min-height: 2.75rem; margin-top: .5rem; color: var(--yellow); font-weight: 600; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .25em; }
+@media (hover: hover) { .link:hover { color: var(--white); } }
+
+/* Circuito da instalação */
+.circuit { --sym: 3.5rem; --gap: 1.75rem; --step: .32s; display: grid; gap: var(--gap); margin-top: 2.5rem; padding: 0; list-style: none; }
+.node { position: relative; display: grid; grid-template-columns: var(--sym) minmax(0, 1fr); column-gap: 1rem; align-items: start; }
+.node:not(:last-child)::before,
+.node:not(:last-child)::after { content: ""; position: absolute; left: calc(var(--sym) / 2 - 1px); top: calc(var(--sym) / 2); width: 2px; height: calc(100% + var(--gap)); background: var(--wire); transform-origin: top; }
+.node:not(:last-child)::after { background: var(--yellow); }
+.sym { position: relative; z-index: 1; display: grid; place-items: center; width: var(--sym); height: var(--sym); background: var(--stone); border: 2px solid var(--yellow); border-radius: .75rem; color: var(--yellow); box-shadow: 0 0 0 .3rem var(--glow); }
+.sym svg { width: 2.375rem; height: 2.375rem; }
+.node h3 { margin-top: .5rem; font-size: 1.375rem; }
+.node p { margin-top: .375rem; font-size: 1rem; }
+@media (prefers-reduced-motion: no-preference) {
+  .js .circuit:not(.is-on) .node::after { transform: scaleY(0); }
+  .js .circuit:not(.is-on) .sym { border-color: var(--wire); color: var(--muted); box-shadow: none; }
+  .js .circuit.is-on .node::after { transition: transform var(--step) linear calc(var(--i) * var(--step)); }
+  .js .circuit.is-on .sym { transition: border-color .2s, color .2s, box-shadow .2s; transition-delay: calc(var(--i) * var(--step)); }
+}
+.norm { display: flex; gap: .75rem; align-items: flex-start; max-width: 44rem; margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .9375rem; }
+.norm .icon { color: var(--yellow); margin-top: .15rem; }
+
+/* Dúvidas */
+.faq { margin-top: 2rem; border-top: 1px solid var(--line); }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 3rem; padding-block: 1.125rem; cursor: pointer; list-style: none; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary h3 { font: 600 1.0625rem/1.4 var(--font-body); text-transform: none; letter-spacing: 0; }
+.faq summary::after { content: ""; width: 1.125rem; height: 1.125rem; flex: none; background: linear-gradient(var(--yellow), var(--yellow)) center / 100% 2px no-repeat, linear-gradient(var(--yellow), var(--yellow)) center / 2px 100% no-repeat; transition: background-size .2s; }
+.faq details[open] summary::after { background-size: 100% 2px, 2px 0; }
+.faq__a { max-width: 42rem; padding-bottom: 1.375rem; }
+@media (prefers-reduced-motion: reduce) { .faq summary::after { transition: none; } }
+
+/* Contato */
+.contact { padding-block: 3.75rem; background: var(--yellow); color: var(--ink); }
+.contact h2 { color: var(--ink); }
+.contact :focus-visible { outline-color: var(--ink); }
+.contact__grid { display: grid; gap: 2.25rem; }
+.steps { display: grid; gap: 1.125rem; margin-top: 1.75rem; padding: 0; list-style: none; counter-reset: step; }
+.steps li { display: grid; grid-template-columns: 2rem minmax(0, 1fr); gap: .75rem; align-items: baseline; counter-increment: step; font-size: 1.0625rem; }
+.steps li::before { content: counter(step); font: 800 2.25rem/1 var(--font-display); }
+.contact__cta { display: grid; gap: .75rem; align-content: start; }
+.contact__cta .btn { width: 100%; }
+.contact__phone { font: 800 2.25rem/1 var(--font-display); letter-spacing: .01em; }
+.contact__area { display: flex; gap: .5rem; align-items: flex-start; font-size: .9375rem; }
+.contact__area .icon { width: 1.25rem; height: 1.25rem; margin-top: .15rem; }
+
+/* Rodapé */
+.footer { padding-block: 3rem 3rem; border-top: 1px solid var(--line); font-size: .9375rem; }
+.js .footer { padding-bottom: calc(6rem + env(safe-area-inset-bottom, 0px)); }
+.footer__grid { display: grid; gap: 1.5rem; }
+.footer__logo { width: 9.5rem; }
+.footer__info { display: grid; gap: .875rem; max-width: 34rem; }
+.footer strong { color: var(--white); }
+.footer a { color: var(--white); text-decoration-color: var(--yellow); text-underline-offset: .2em; }
+.footer__slogan { font: 800 1.25rem/1.1 var(--font-display); text-transform: uppercase; color: var(--yellow); }
+.footer__legal { margin-top: 2.5rem; color: var(--muted); font-size: .8125rem; }
+
+/* Botão fixo do WhatsApp: barra no polegar no celular, pílula flutuante no desktop */
+.dock { position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; padding: .75rem var(--gutter-r) calc(.75rem + env(safe-area-inset-bottom, 0px)) var(--gutter-l); background: var(--dock-bg); border-top: 1px solid var(--line); transform: translateY(110%); visibility: hidden; transition: transform .25s ease, visibility 0s linear .25s; }
+.dock.is-visible { transform: none; visibility: visible; transition: transform .25s ease; }
+.dock .btn { width: 100%; }
+@media (prefers-reduced-motion: reduce) { .dock, .dock.is-visible { transition: none; } }
+
+/* Telas médias */
+@media (min-width: 48rem) {
+  :root { --gutter-l: max(1.5rem, env(safe-area-inset-left, 0px)); --gutter-r: max(1.5rem, env(safe-area-inset-right, 0px)); --header-h: 4.5rem; }
+  body { font-size: 1.125rem; }
+  .brand img { height: 2.5rem; }
+  .btn--head { width: auto; padding: 0 1.125rem; font-size: 1rem; }
+  .btn--head .btn__label { position: static; width: auto; height: auto; overflow: visible; clip: auto; }
+  .hero { padding-block: 3.5rem 5rem; }
+  .hero__grid { grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); align-items: center; gap: 3rem; }
+  .hero__cta { grid-template-columns: auto; justify-items: start; }
+  .hero__media img { aspect-ratio: 470 / 656; }
+  .services { grid-template-columns: 1fr 1fr; column-gap: 2.5rem; }
+  .service--main { grid-column: 1 / -1; padding: 2rem; margin-bottom: 1.25rem; }
+  .service--main .btn { width: auto; }
+  .contact__grid { grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); align-items: end; gap: 3rem; }
+  .footer__grid { grid-template-columns: auto minmax(0, 1fr); align-items: start; column-gap: 3rem; }
+}
+
+/* Telas grandes */
+@media (min-width: 64rem) {
+  :root { --gutter-l: max(2rem, env(safe-area-inset-left, 0px)); --gutter-r: max(2rem, env(safe-area-inset-right, 0px)); }
+  .nav { display: flex; gap: 1.75rem; margin-right: 1.25rem; }
+  .nav a { padding-block: .5rem; font-size: 1rem; text-decoration: none; color: var(--text); }
+  .nav a:hover { color: var(--white); text-decoration: underline; text-decoration-color: var(--yellow); text-decoration-thickness: 2px; text-underline-offset: .35em; }
+  .section { padding-block: 6rem; }
+  .hero__grid { grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 4.5rem; }
+  .services { grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); column-gap: 3.5rem; align-items: start; }
+  .service--main { grid-column: auto; grid-row: 1 / span 2; margin-bottom: 0; }
+  .service:not(.service--main):last-child { border-bottom: 1px solid var(--yellow-line); }
+  .circuit { --gap: 1.5rem; grid-template-columns: repeat(6, minmax(0, 1fr)); margin-top: 3.5rem; }
+  .node { grid-template-columns: 1fr; row-gap: 1.25rem; }
+  .node:not(:last-child)::before,
+  .node:not(:last-child)::after { left: calc(var(--sym) / 2); top: calc(var(--sym) / 2 - 1px); width: calc(100% + var(--gap)); height: 2px; transform-origin: left; }
+  .node h3 { margin-top: 0; font-size: 1.3125rem; }
+  .node p { font-size: .9375rem; }
+  .contact { padding-block: 5rem; }
+  .js .footer { padding-bottom: 3rem; }
+  .dock { left: auto; right: max(1.5rem, env(safe-area-inset-right, 0px)); bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px)); padding: 0; background: none; border: 0; }
+  .dock .btn { width: auto; padding-inline: 1.5rem; box-shadow: 0 .75rem 2rem rgba(0, 0, 0, .55), 0 0 0 1px rgba(0, 0, 0, .4); }
+}
+@media (min-width: 64rem) and (prefers-reduced-motion: no-preference) {
+  .js .circuit:not(.is-on) .node::after { transform: scaleX(0); }
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Electrician",
+      "@id": "https://www.seudominio.com.br/#empresa",
+      "name": "HS Eletric Performance",
+      "alternateName": ["HS Eletric", "HS Electric Performance"],
+      "description": "Instalação de carregador veicular (wallbox) para carros elétricos e híbridos plug-in, projetos luminotécnicos e manutenção elétrica industrial em Blumenau e região.",
+      "slogan": "Energia que te move para o futuro",
+      "url": "https://www.seudominio.com.br/",
+      "sameAs": ["https://www.instagram.com/hs_eletric_performance/"],
+      "telephone": "+55 47 98415-2765",
+      "logo": "https://www.seudominio.com.br/assets/img/logo-hs-512.png",
+      "image": "https://www.seudominio.com.br/og-image.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Blumenau",
+        "addressRegion": "SC",
+        "addressCountry": "BR"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Blumenau" },
+        { "@type": "City", "name": "Gaspar" },
+        { "@type": "City", "name": "Pomerode" },
+        { "@type": "City", "name": "Indaial" },
+        { "@type": "City", "name": "Timbó" },
+        { "@type": "City", "name": "Brusque" }
+      ],
+      "knowsAbout": ["Instalação de carregador veicular", "Wallbox", "Recarga de veículos elétricos", "ABNT NBR 17019", "ABNT NBR 5410", "Projeto luminotécnico", "Manutenção elétrica industrial"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Serviços elétricos",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Instalação de carregador veicular (wallbox)", "description": "Instalação de wallbox para carros elétricos e híbridos plug-in em casas, condomínios e empresas, com circuito exclusivo, disjuntor, DR e DPS." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Projetos luminotécnicos", "description": "Projeto de iluminação para casas, lojas e empresas, com escolha das luminárias e instalação." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Manutenção elétrica industrial", "description": "Manutenção elétrica preventiva e corretiva em quadros, painéis e máquinas." } }
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.seudominio.com.br/#site",
+      "url": "https://www.seudominio.com.br/",
+      "name": "HS Eletric Performance",
+      "inLanguage": "pt-BR",
+      "publisher": { "@id": "https://www.seudominio.com.br/#empresa" }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json" id="faq-jsonld">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://www.seudominio.com.br/#duvidas",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quanto custa instalar um carregador de carro elétrico em Blumenau?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende da distância entre o quadro e a vaga, da potência do carregador e de como está a instalação elétrica hoje. Mandando fotos do quadro de energia e do local pelo WhatsApp, o orçamento sai bem mais rápido."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vou precisar aumentar a carga do padrão na Celesc?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende da potência do carregador e do consumo que o imóvel já tem. Na avaliação conferimos o padrão de entrada e o quadro e dizemos se a estrutura atual dá conta ou se é preciso pedir aumento de carga à Celesc."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Dá para instalar carregador em condomínio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dá. Normalmente o condomínio precisa aprovar a instalação, e o consumo pode sair do medidor do seu apartamento ou ser medido à parte. Avaliamos a estrutura do prédio e indicamos a solução mais simples para o seu caso."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quanto tempo leva para carregar o carro em casa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende da bateria e da potência que o carro aceita. Um wallbox de 7 kW repõe algo entre 30 e 45 km de autonomia por hora de recarga, o que costuma bastar para completar a bateria durante a noite."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Posso carregar o carro na tomada comum?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Para uso eventual, sim, com o carregador portátil que acompanha muitos carros. Mas a recarga é lenta, na faixa de 10 a 20 km de autonomia por hora, e uma tomada comum não foi feita para trabalhar horas no limite. No dia a dia, o wallbox em circuito exclusivo é mais rápido e mais seguro."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qual norma vale para a instalação de carregador veicular?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A ABNT NBR 17019, publicada em 2022, traz as regras específicas para a alimentação de veículos elétricos e complementa a NBR 5410, que vale para toda instalação de baixa tensão. Uma das exigências é a proteção por DR."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vocês instalam carregador para Volvo e GWM?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Somos credenciados Volvo e GWM e já passamos de 200 carregadores instalados."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quais cidades vocês atendem?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Blumenau e região, incluindo Gaspar, Pomerode, Indaial, Timbó e Brusque. Se a sua cidade não está na lista, chame no WhatsApp."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true" focusable="false">
+  <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-8l-5 4v-4H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M8 9h8M8 12.5h5"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2.5 5 13.5h6l-1 8 8-11h-6l1-8z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></symbol>
+  <symbol id="i-wallbox" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="14" rx="3"/><path d="M12.8 5.8 10.3 9.7h3.4l-2.5 3.9"/><path d="M12 16.5v2.2a2.8 2.8 0 0 0 2.8 2.8h4.2"/></symbol>
+  <symbol id="i-lamp" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5V7"/><path d="M4.5 14a7.5 7.5 0 0 1 15 0z"/><path d="M10 14a2 2 0 0 0 4 0"/><path d="M12 19.2v2.3M6.9 18.4l-1.2 1.8M17.1 18.4l1.2 1.8"/></symbol>
+  <symbol id="i-wrench" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.6 5.4a4.5 4.5 0 0 0-5.9 5.9l-5.2 5.2a2.1 2.1 0 0 0 3 3l5.2-5.2a4.5 4.5 0 0 0 5.9-5.9l-2.7 2.7-2.6-.4-.4-2.6z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8 19.5 6v5.6c0 4.6-3.1 8.3-7.5 9.7-4.4-1.4-7.5-5.1-7.5-9.7V6z"/><path d="m8.6 12 2.4 2.4 4.4-4.6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.5s-7-6-7-11.5a7 7 0 0 1 14 0c0 5.5-7 11.5-7 11.5z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="s-quadro" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="6" width="30" height="36" rx="3"/><path d="M9 13.5h30"/><rect x="14" y="19" width="5" height="11" rx="1"/><rect x="21.5" y="19" width="5" height="11" rx="1"/><rect x="29" y="19" width="5" height="11" rx="1"/><path d="M14 35.5h20"/></symbol>
+  <symbol id="s-cabo" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><circle cx="24" cy="24" r="15"/><circle cx="24" cy="17.5" r="4.5"/><circle cx="18.4" cy="27.3" r="4.5"/><circle cx="29.6" cy="27.3" r="4.5"/></symbol>
+  <symbol id="s-disjuntor" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 5v11"/><path d="m21 13 6 6m0-6-6 6"/><path d="M24 43V32l-8.5-14"/></symbol>
+  <symbol id="s-dr" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 5v11"/><path d="M24 43V30l-8.5-14"/><ellipse cx="24" cy="37" rx="8" ry="3"/><path d="M16 37h-3V24h7" stroke-dasharray="2 2.5"/></symbol>
+  <symbol id="s-dps" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4v8"/><rect x="16" y="12" width="16" height="17" rx="2"/><path d="m25.5 15.5-4 6h5l-4 5.5"/><path d="M24 29v6"/><path d="M15 35h18M18.5 39.5h11M22 44h4"/></symbol>
+  <symbol id="s-wallbox" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="13" y="5" width="22" height="27" rx="5"/><path d="m25.5 11.5-4.5 7h6l-4.5 7"/><path d="M24 32v4a5 5 0 0 0 5 5h7"/></symbol>
+</svg>
+
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="topbar">
+  <div class="wrap topbar__in">
+    <a class="brand" href="#topo"><img src="assets/img/logo-hs-horizontal.svg" alt="HS Eletric Performance" width="219" height="36"></a>
+    <nav class="nav" aria-label="Seções da página">
+      <a href="#servicos">Serviços</a>
+      <a href="#instalacao">Instalação</a>
+      <a href="#duvidas">Dúvidas</a>
+    </nav>
+    <a class="btn btn--primary btn--head" href="https://wa.me/5547984152765?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener" data-origem="cabecalho"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chat"/></svg><span class="btn__label">Orçamento no WhatsApp</span></a>
+  </div>
+</header>
+
+<main id="conteudo">
+  <section class="hero" id="topo" aria-labelledby="titulo">
+    <div class="wrap hero__grid">
+      <div class="hero__text">
+        <h1 class="hero__title" id="titulo">
+          <span>Instalação de</span>
+          <span class="hl">carregador</span>
+          <span>veicular</span>
+          <span class="hero__place">em Blumenau e região</span>
+        </h1>
+        <p class="lead">Instalamos o carregador do seu carro elétrico ou híbrido plug-in em casa, no condomínio ou na empresa, com circuito exclusivo e as proteções que a norma exige.</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" id="cta-hero" href="https://wa.me/5547984152765?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento%20para%20instalar%20um%20carregador%20veicular." target="_blank" rel="noopener" data-origem="hero"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chat"/></svg>Pedir orçamento no WhatsApp</a>
+          <p class="hero__phone">ou chame no <a href="https://wa.me/5547984152765?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener" data-origem="hero-numero">(47) 98415-2765</a></p>
+        </div>
+        <ul class="proof">
+          <li><strong>+200</strong>carregadores instalados</li>
+          <li><strong>Volvo e GWM</strong>instalador credenciado</li>
+        </ul>
+      </div>
+      <div class="hero__media">
+        <picture>
+          <source type="image/avif" srcset="assets/img/instalacao-carregador-veicular-blumenau.avif">
+          <source type="image/webp" srcset="assets/img/instalacao-carregador-veicular-blumenau.webp">
+          <img src="assets/img/instalacao-carregador-veicular-blumenau.jpg" width="470" height="656" fetchpriority="high" alt="Carregador veicular wallbox instalado na parede, ligado ao quadro de proteção exclusivo da HS Eletric Performance">
+        </picture>
+        <p class="tag"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-bolt"/></svg>Energia que te move para o futuro</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="servicos" aria-labelledby="servicos-titulo">
+    <div class="wrap">
+      <div class="section__head">
+        <h2 id="servicos-titulo">Serviços elétricos em Blumenau e região</h2>
+        <p class="section__intro">Eletricista especializado, do carregador na garagem à manutenção da fábrica.</p>
+      </div>
+      <div class="services">
+        <article class="service service--main">
+          <div class="service__head">
+            <svg class="service__icon" aria-hidden="true" focusable="false"><use href="#i-wallbox"/></svg>
+            <h3>Carregador veicular (wallbox)</h3>
+          </div>
+          <p>Instalação de wallbox para carros elétricos e híbridos plug-in em casas, condomínios e empresas. Avaliamos o quadro e o padrão de entrada, dimensionamos cabo e proteções e entregamos o carregador configurado e testado no seu carro.</p>
+          <ul class="checks">
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Circuito exclusivo com disjuntor, DR e DPS</li>
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Instalação conforme a NBR 5410 e a NBR 17019</li>
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Credenciado Volvo e GWM, com mais de 200 carregadores instalados</li>
+          </ul>
+          <a class="btn btn--primary" href="https://wa.me/5547984152765?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento%20para%20instalar%20um%20carregador%20veicular." target="_blank" rel="noopener" data-origem="servico-carregador"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chat"/></svg>Pedir orçamento de carregador</a>
+        </article>
+        <article class="service">
+          <div class="service__head">
+            <svg class="service__icon" aria-hidden="true" focusable="false"><use href="#i-lamp"/></svg>
+            <h3>Projetos luminotécnicos</h3>
+          </div>
+          <p>Projeto de iluminação para casas, lojas e empresas: a quantidade certa de luz em cada ambiente, a escolha das luminárias e a instalação.</p>
+          <a class="link" href="https://wa.me/5547984152765?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento%20de%20projeto%20luminot%C3%A9cnico." target="_blank" rel="noopener" data-origem="servico-luminotecnico">Pedir orçamento de projeto</a>
+        </article>
+        <article class="service">
+          <div class="service__head">
+            <svg class="service__icon" aria-hidden="true" focusable="false"><use href="#i-wrench"/></svg>
+            <h3>Manutenção industrial</h3>
+          </div>
+          <p>Manutenção elétrica preventiva e corretiva para indústrias da região, em quadros, painéis e máquinas, para evitar paradas na produção.</p>
+          <a class="link" href="https://wa.me/5547984152765?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20falar%20sobre%20manuten%C3%A7%C3%A3o%20el%C3%A9trica%20industrial." target="_blank" rel="noopener" data-origem="servico-manutencao">Pedir orçamento de manutenção</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--stone" id="instalacao" aria-labelledby="instalacao-titulo">
+    <div class="wrap">
+      <div class="section__head">
+        <h2 id="instalacao-titulo">O que vai na instalação do seu carregador</h2>
+        <p class="section__intro">Um carro passa horas puxando corrente alta do mesmo circuito. Por isso o wallbox ganha uma linha só dele, com proteções próprias, em vez de dividir o circuito com o resto do imóvel.</p>
+      </div>
+      <ol class="circuit" id="circuito">
+        <li class="node" style="--i:0">
+          <span class="sym"><svg aria-hidden="true" focusable="false"><use href="#s-quadro"/></svg></span>
+          <div><h3>Quadro do imóvel</h3><p>Conferimos o padrão de entrada e a carga disponível antes de qualquer coisa.</p></div>
+        </li>
+        <li class="node" style="--i:1">
+          <span class="sym"><svg aria-hidden="true" focusable="false"><use href="#s-cabo"/></svg></span>
+          <div><h3>Cabo dimensionado</h3><p>Bitola calculada pela potência do carregador e pela distância até a vaga.</p></div>
+        </li>
+        <li class="node" style="--i:2">
+          <span class="sym"><svg aria-hidden="true" focusable="false"><use href="#s-disjuntor"/></svg></span>
+          <div><h3>Disjuntor exclusivo</h3><p>Protege o cabo contra sobrecarga e curto-circuito.</p></div>
+        </li>
+        <li class="node" style="--i:3">
+          <span class="sym"><svg aria-hidden="true" focusable="false"><use href="#s-dr"/></svg></span>
+          <div><h3>Proteção contra choque (DR)</h3><p>Desliga em frações de segundo se houver fuga de corrente.</p></div>
+        </li>
+        <li class="node" style="--i:4">
+          <span class="sym"><svg aria-hidden="true" focusable="false"><use href="#s-dps"/></svg></span>
+          <div><h3>Proteção contra surtos (DPS)</h3><p>Desvia surtos de raios e da rede antes que cheguem ao carregador.</p></div>
+        </li>
+        <li class="node" style="--i:5">
+          <span class="sym"><svg aria-hidden="true" focusable="false"><use href="#s-wallbox"/></svg></span>
+          <div><h3>Wallbox aterrado</h3><p>Fixado, aterrado, configurado e testado com o seu carro.</p></div>
+        </li>
+      </ol>
+      <p class="norm"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-shield"/></svg>Seguimos a ABNT NBR 5410 e a NBR 17019, a norma brasileira específica para a alimentação de veículos elétricos.</p>
+    </div>
+  </section>
+
+  <section class="section" id="duvidas" aria-labelledby="duvidas-titulo">
+    <div class="wrap">
+      <div class="section__head">
+        <h2 id="duvidas-titulo">Dúvidas frequentes</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary><h3>Quanto custa instalar um carregador de carro elétrico em Blumenau?</h3></summary>
+          <div class="faq__a"><p>Depende da distância entre o quadro e a vaga, da potência do carregador e de como está a instalação elétrica hoje. Mandando fotos do quadro de energia e do local pelo WhatsApp, o orçamento sai bem mais rápido.</p></div>
+        </details>
+        <details>
+          <summary><h3>Vou precisar aumentar a carga do padrão na Celesc?</h3></summary>
+          <div class="faq__a"><p>Depende da potência do carregador e do consumo que o imóvel já tem. Na avaliação conferimos o padrão de entrada e o quadro e dizemos se a estrutura atual dá conta ou se é preciso pedir aumento de carga à Celesc.</p></div>
+        </details>
+        <details>
+          <summary><h3>Dá para instalar carregador em condomínio?</h3></summary>
+          <div class="faq__a"><p>Dá. Normalmente o condomínio precisa aprovar a instalação, e o consumo pode sair do medidor do seu apartamento ou ser medido à parte. Avaliamos a estrutura do prédio e indicamos a solução mais simples para o seu caso.</p></div>
+        </details>
+        <details>
+          <summary><h3>Quanto tempo leva para carregar o carro em casa?</h3></summary>
+          <div class="faq__a"><p>Depende da bateria e da potência que o carro aceita. Um wallbox de 7 kW repõe algo entre 30 e 45 km de autonomia por hora de recarga, o que costuma bastar para completar a bateria durante a noite.</p></div>
+        </details>
+        <details>
+          <summary><h3>Posso carregar o carro na tomada comum?</h3></summary>
+          <div class="faq__a"><p>Para uso eventual, sim, com o carregador portátil que acompanha muitos carros. Mas a recarga é lenta, na faixa de 10 a 20 km de autonomia por hora, e uma tomada comum não foi feita para trabalhar horas no limite. No dia a dia, o wallbox em circuito exclusivo é mais rápido e mais seguro.</p></div>
+        </details>
+        <details>
+          <summary><h3>Qual norma vale para a instalação de carregador veicular?</h3></summary>
+          <div class="faq__a"><p>A ABNT NBR 17019, publicada em 2022, traz as regras específicas para a alimentação de veículos elétricos e complementa a NBR 5410, que vale para toda instalação de baixa tensão. Uma das exigências é a proteção por DR.</p></div>
+        </details>
+        <details>
+          <summary><h3>Vocês instalam carregador para Volvo e GWM?</h3></summary>
+          <div class="faq__a"><p>Sim. Somos credenciados Volvo e GWM e já passamos de 200 carregadores instalados.</p></div>
+        </details>
+        <details>
+          <summary><h3>Quais cidades vocês atendem?</h3></summary>
+          <div class="faq__a"><p>Blumenau e região, incluindo Gaspar, Pomerode, Indaial, Timbó e Brusque. Se a sua cidade não está na lista, chame no WhatsApp.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contato" aria-labelledby="contato-titulo">
+    <div class="wrap contact__grid">
+      <div>
+        <h2 id="contato-titulo">Fale conosco e solicite um orçamento</h2>
+        <ol class="steps">
+          <li>Chame no WhatsApp e conte qual é o carro e onde ele vai carregar.</li>
+          <li>Mande fotos do quadro de energia e da vaga. Se precisar, marcamos uma visita.</li>
+          <li>Receba o orçamento e agende a instalação.</li>
+        </ol>
+      </div>
+      <div class="contact__cta">
+        <a class="btn btn--dark" id="cta-contato" href="https://wa.me/5547984152765?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener" data-origem="contato"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chat"/></svg>Chamar no WhatsApp</a>
+        <p class="contact__phone">(47) 98415-2765</p>
+        <p class="contact__area"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-pin"/></svg>Atendemos Blumenau, Gaspar, Pomerode, Indaial, Timbó, Brusque e região.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <img class="footer__logo" src="assets/img/logo-hs.svg" alt="HS Eletric Performance" width="152" height="101" loading="lazy">
+    <div class="footer__info">
+      <p><strong>HS Eletric Performance</strong><br>Eletricista especializado em carregador veicular, projetos luminotécnicos e manutenção industrial em Blumenau e região, SC.</p>
+      <p><a href="https://wa.me/5547984152765?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener" data-origem="rodape">WhatsApp (47) 98415-2765</a><br><a href="https://www.instagram.com/hs_eletric_performance/" target="_blank" rel="noopener">Instagram @hs_eletric_performance</a></p>
+      <p class="footer__slogan">Energia que te move para o futuro</p>
+    </div>
+  </div>
+  <div class="wrap"><p class="footer__legal">© <span id="ano">2026</span> HS Eletric Performance</p></div>
+</footer>
+
+<div class="dock" id="dock">
+  <a class="btn btn--primary" href="https://wa.me/5547984152765?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener" data-origem="botao-fixo"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chat"/></svg>Pedir orçamento no WhatsApp</a>
+</div>
+
+<script>
+(() => {
+  const d = document;
+  const year = d.getElementById('ano');
+  if (year) year.textContent = String(new Date().getFullYear());
+
+  const circuit = d.getElementById('circuito');
+  const dock = d.getElementById('dock');
+  const heroCta = d.getElementById('cta-hero');
+  const contact = d.getElementById('contato');
+
+  if ('IntersectionObserver' in window) {
+    // Liga o circuito uma vez, quando ele entra na tela
+    const io = new IntersectionObserver((entries) => {
+      if (entries.some((e) => e.isIntersecting)) { circuit.classList.add('is-on'); io.disconnect(); }
+    }, { rootMargin: '0px 0px -25% 0px' });
+    io.observe(circuit);
+
+    // Botão fixo: aparece depois que o botão do topo sai da tela e some na seção de contato
+    let heroPassed = false;
+    let contactInView = false;
+    const sync = () => dock.classList.toggle('is-visible', heroPassed && !contactInView);
+    new IntersectionObserver(([e]) => { heroPassed = !e.isIntersecting && e.boundingClientRect.top < 0; sync(); }).observe(heroCta);
+    new IntersectionObserver(([e]) => { contactInView = e.isIntersecting; sync(); }).observe(contact);
+  } else {
+    circuit.classList.add('is-on');
+  }
+
+  // Mede cliques no WhatsApp se o Google Analytics (gtag) ou o Tag Manager estiver instalado
+  d.addEventListener('click', (ev) => {
+    const a = ev.target.closest && ev.target.closest('a[href^="https://wa.me/"]');
+    if (!a) return;
+    const origem = a.dataset.origem || 'site';
+    if (typeof window.gtag === 'function') window.gtag('event', 'contato_whatsapp', { origem });
+    else if (Array.isArray(window.dataLayer)) window.dataLayer.push({ event: 'contato_whatsapp', origem });
+  });
+})();
+</script>
+</body>
+</html>
