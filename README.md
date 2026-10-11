@@ -16,10 +16,10 @@ Para testar localmente: `python3 -m http.server 8080` dentro da pasta e abrir `h
 
 ## Antes de publicar
 
-1. **Domínio.** Troque `https://www.seudominio.com.br` pelo domínio real em `index.html`, `robots.txt` e `sitemap.xml`:
-   ```sh
-   grep -rl "seudominio.com.br" . | xargs sed -i 's#https://www.seudominio.com.br#https://www.SEUDOMINIO.com.br#g'
-   ```
+1. **Domínio.** O site está configurado para `https://hseletric.netlify.app`. Quando tiver o domínio próprio, troque esse endereço (sem a barra final) nestes lugares:
+   - `index.html`: `canonical`, `og:url`, `og:image` e os `@id`, `url`, `logo` e `image` dos dois blocos JSON-LD (11 ocorrências)
+   - `robots.txt`: linha `Sitemap:`
+   - `sitemap.xml`: `<loc>`
 2. **Textos.** Confira com o eletricista o que foi escrito em nome da empresa: cidades atendidas (texto, FAQ e `areaServed` no JSON-LD), normas citadas (NBR 5410 e NBR 17019), proteções do circuito (disjuntor, DR, DPS) e as três etapas do atendimento.
 3. **Logo.** Foi vetorizada a partir do post do Instagram: o "HS" foi traçado e o texto "ELETRIC PERFORMANCE" foi recomposto em fonte serifada equivalente (Times). Com o arquivo original, substitua `assets/img/logo-hs*.svg` e os ícones.
 4. **Foto.** A foto do topo foi recortada do mesmo post. Fotos originais das instalações ficam melhores; mantenha o nome do arquivo ou atualize o `<picture>` do hero.
